@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Scanner;
 
-public class arrays1 {
+public class arrays15 {
     static Scanner sc = new Scanner(System.in);
     static boolean[] asientos = new boolean[10];
 
