@@ -20,6 +20,7 @@ public class arrays1 {
                 System.out.println();
                 System.out.println();
                 mostrarAvion();
+                System.out.println();
                 System.out.println("--BIENVENIDO A RAUL AIRLINES--");
                 System.out.println("Que tipo de asiento desea? 1 para premium  2 para economica //3 para salir");
                 int tipoAsiento = sc.nextInt();
