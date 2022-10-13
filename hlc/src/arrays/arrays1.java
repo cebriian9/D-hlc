@@ -14,12 +14,14 @@ public class arrays1 {
 
             if (comprobarEstado()==true) {
                 System.out.println("Lo sentimos el avion ya esta completo");
+                salir=true;
 
             } else {
                 System.out.println();
                 System.out.println();
+                mostrarAvion();
                 System.out.println("--BIENVENIDO A RAUL AIRLINES--");
-                System.out.println("Que tipo de asiento desea? 1 para premium  2 para economica");
+                System.out.println("Que tipo de asiento desea? 1 para premium  2 para economica //3 para salir");
                 int tipoAsiento = sc.nextInt();
 
                 switch (tipoAsiento) {
@@ -42,6 +44,18 @@ public class arrays1 {
         }
     }
 
+    private static void mostrarAvion() {
+        System.out.println("Clase Premium:");
+        for (int i = 0; i < asientos.length; i++) {
+            System.out.print("/asiento ["+(i+1)+"] esta: "+asientos[i]+"/");
+            if (i==4) {
+                System.out.println();
+                System.out.println("Clase Economica:");
+            }
+        }
+        System.out.println();
+    }
+
     private static void sentarVIP() {
         System.out.println("--Bienvenido a clase Premium--");
         System.out.println("Buscando asientos...");
@@ -58,10 +72,9 @@ public class arrays1 {
         }
         if (asientoEncontrado == false) {
             System.out.println("Acepta cambiar a clase economica? 1-si 2-no");
-            String confirmacion = sc.nextLine();
-            confirmacion = sc.nextLine();
-
-            if (confirmacion == "1") {
+            int confirmacion = sc.nextInt();
+            
+            if (confirmacion == 1) {
                 sentarPobre();
             } else {
                 System.out.println("fuera de aqui y SIGUIENTE!!");
@@ -75,7 +88,7 @@ public class arrays1 {
         System.out.println("Buscando asientos...");
         Boolean asientoEncontrado = false;
 
-        for (int i = 6; i < asientos.length; i++) {
+        for (int i = 5; i < asientos.length; i++) {
 
             if (asientos[i] == false) {
                 asientos[i] = true;
@@ -87,10 +100,9 @@ public class arrays1 {
 
         if (asientoEncontrado == false) {
             System.out.println("Acepta cambiar a clase Premium? 1-si 2-no");
-            String confirmacion = sc.nextLine();
-            confirmacion = sc.nextLine();
-
-            if (confirmacion == "1") {
+            int confirmacion = sc.nextInt();
+            
+            if (confirmacion == 1) {
                 sentarPobre();
             } else {
                 System.out.println("fuera de aqui y SIGUIENTE!!");
