@@ -19,8 +19,13 @@ public class ejercicio9 {
     }
 
     private static int BaseExponente(int num, int exponente) {
-        for (int i = 0; i < exponente; i++) {
-            num*=num;
+        
+        if (exponente>0) {
+            for (int i = 1; i < exponente; i++) {
+                num*=num;
+            }
+        }else{
+            num=1;
         }
 
         return num;
