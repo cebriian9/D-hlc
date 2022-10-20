@@ -16,8 +16,12 @@ public class ejercicio6 {
 
     private static void rellenarHoras() {
         for (int i = 0; i < clientes.length; i++) {
-            float num=(float) (Math.random()*23+1);
-            clientes[i]=num;
+            float horas=(int) (Math.random()*23+1);
+            float minutos=(int) (Math.random()*59+1);
+            minutos=minutos/100;
+            horas+=minutos;
+
+            clientes[i]=horas;
             
         }
     }
@@ -25,16 +29,17 @@ public class ejercicio6 {
 
 
     private static float calcularPagos(float tiempo) {
-        float pagoTotal=0;
+        float pagoTotal=2;
 
-        if(tiempo<=2){
-            pagoTotal=2;
-        }else{
-            pagoTotal=2;
+        tiempo=(int) (tiempo);
+        tiempo++;
+
+        if (tiempo>3) {
             pagoTotal+=(tiempo-3)*0.5;
+        }if (pagoTotal>10) {
+            pagoTotal=10;            
         }
         
-
         return pagoTotal;
     }
 }
