@@ -13,22 +13,35 @@ public class ejercicio9 {
 
         
 
-        System.out.println("Resultado: "+BaseExponente(num, exponente));
+        System.out.println("Resultado: "+enteroPotencia(num, exponente));
+        System.out.println("Resultado recursivo: "+enteroPotenciaRecursiva(num, exponente));
 
         sc.close();
     }
 
-    private static int BaseExponente(int num, int exponente) {
+    private static int enteroPotencia(int num, int exponente) {
         
+        int resultado=num;
+
         if (exponente>0) {
             for (int i = 1; i < exponente; i++) {
-                num*=num;
+                resultado*=resultado;
             }
         }else{
-            num=1;
+            resultado=1;
         }
 
-        return num;
+        return resultado;
+    }
+
+    private static int enteroPotenciaRecursiva(int num,int exponente) {
+        if(exponente==0){
+            return 1;
+        } else if (exponente<0) {
+            return enteroPotenciaRecursiva(num, exponente+1) / num;
+        } else {
+            return num * enteroPotenciaRecursiva(num, exponente-1);
+        }
     }
 
 }

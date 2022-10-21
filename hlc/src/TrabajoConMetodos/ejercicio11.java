@@ -14,6 +14,7 @@ public class ejercicio11 {
         }else{
             System.out.println("El segundo numero NO es multiplo");
         }
+        sc.close();
     }
 
     private static boolean multiplos(int num1, int num2) {

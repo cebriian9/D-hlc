@@ -10,6 +10,7 @@ public class ejercicio10 {
         double catetoB=sc.nextDouble();
 
         System.out.printf("La longitud de la hipotenusa es: %.2f ",calcularHipotenusa(cateoA,catetoB));
+        sc.close();
     }
 
     private static double calcularHipotenusa(double cateoA, double catetoB) {
