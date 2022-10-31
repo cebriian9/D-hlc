@@ -17,7 +17,7 @@ public class ejercicio16 {
     }
 
     private static void tareaA(int num, int num2) {
-        int parteEntera;
-        
+        //int parteEntera;
+
     }
 }
