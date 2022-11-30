@@ -7,10 +7,7 @@ public class ejercicio17 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("¿Que quiere convertir?");
-        System.out.println("""
-                1-Celsius
-                2-Fahrenheit
-                """);
+        System.out.println("1-Celsius 2-Fahrenheit");
         int menu = sc.nextInt();
 
         switch (menu) {
