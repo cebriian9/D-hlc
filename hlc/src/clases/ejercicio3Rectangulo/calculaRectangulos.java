@@ -1,6 +1,5 @@
 package clases.ejercicio3Rectangulo;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class calculaRectangulos {
@@ -10,25 +9,40 @@ public class calculaRectangulos {
         rectangulo Rectangulo = new rectangulo();
 
         float longitud = 0;
-        boolean salir=false;
-        while (salir==false) {
-            
-            try {
-                System.out.println("introduce la longitud del rectangulo (1-20)");
-                longitud = sc.nextFloat();
-            } catch (InputMismatchException e) {
-                System.out.println("solo introducir numeros");
+        float anchura = 0;
 
-            }
+
+        boolean salir = false;
+        while (salir == false) {
+            System.out.println("introduce la longitud del rectangulo (1-20)");
+            longitud = sc.nextFloat();
 
             if (Rectangulo.setLongitud(longitud)) {
                 System.out.println("la longitud es correcta");
-                salir=true;
-            }else{
+                salir = true;
+            } else {
                 System.out.println("La longitud no es correcta");
             }
 
-        } 
+        }
+
+        salir = false;
+        while (salir == false) {
+            System.out.println("introduce la anchura del rectangulo (1-20)");
+            anchura = sc.nextFloat();
+
+            if (Rectangulo.setAnchura(anchura)) {
+                System.out.println("la anchura es correcta");
+                salir = true;
+            } else {
+                System.out.println("La anchura no es correcta");
+            }
+
+        }
+
+        System.out.println("El perimetro del rectangulo es "+ Rectangulo.perimetro());
+
+        System.out.println("El perimetro del rectangulo es "+ Rectangulo.area());
 
         sc.close();
     }
